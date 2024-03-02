@@ -1,0 +1,10 @@
+<form class="container form border border-round-3 d-flex flex-column gap-3 p-3 m-3 bg-dark bg-opacity-10">
+
+  {{#each contacts}}
+    <!--  вызвать компонента field и передать ему name и phone-->
+    {{> field name=name phone=phone}}
+  {{/each}}
+
+  {{> btn text="Add contact" className="redirect-to-add btn-primary" }}
+
+</form>

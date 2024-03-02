@@ -1,0 +1,18 @@
+<form class="update-form container form border border-round-3 d-flex flex-column gap-3 p-3 m-3 bg-dark bg-opacity-10" method="POST">
+  {{#each contacts}}
+    <!--  вызвать компонента field и передать ему name и phone-->
+    {{> field name=name phone=phone}}
+  {{/each}}
+
+  <div class="w-100 d-flex gap-2">
+    {{> input name="name" class="form-control w-50" content=name}}
+    {{> input name="phone" class="form-control w-50" content=phone}}
+  </div>
+
+  <div class="w-100 d-flex gap-2">
+    {{> btn text="Update" name="update" className="update-contact btn-success" type="submit"}}
+    {{> btn text="Delete" name="delete" className="delete btn-danger" type="submit"}}
+    {{{ cancel }}}
+  </div>
+
+</form>
