@@ -21,7 +21,6 @@ routes.post('/add', async (req: ContactsRequest, res) => {
   await setData(contacts);
   res.redirect('/');
 })
-
 routes.get('/update', (req, res) => {
   const {phone, name} = req.query;
   const contacts = req.contacts;

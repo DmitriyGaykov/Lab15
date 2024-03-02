@@ -5,13 +5,13 @@
   {{/each}}
 
   <div class="w-100 d-flex gap-2">
-    {{> input name="name" class="form-control w-50" content=name}}
-    {{> input name="phone" class="form-control w-50" content=phone}}
+    {{> input name="name" className="form-control w-50 name-input" content=name}}
+    {{> input name="phone" className="form-control w-50 phone-input" content=phone}}
   </div>
 
   <div class="w-100 d-flex gap-2">
     {{> btn text="Update" name="update" className="update-contact btn-success" type="submit"}}
-    {{> btn text="Delete" name="delete" className="delete btn-danger" type="submit"}}
+    {{> btn text="Delete" name="delete" className="delete btn-danger delete-button" type="submit"}}
     {{{ cancel }}}
   </div>
 

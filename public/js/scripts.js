@@ -1,14 +1,16 @@
 const redirectAddButton = document.querySelector('.redirect-to-add');
 redirectAddButton?.addEventListener('click', onRedirectToAdd);
 
-//const addForm = document.querySelector('.add-form');
-//addForm?.addEventListener('submit', onAddSubmit);
-
 const cancelButton = document.querySelector('.cancel');
 cancelButton?.addEventListener('click', onCancel);
 
 const updateForm = document.querySelector('.update-form');
 updateForm?.addEventListener('submit', onUpdateSubmit);
+
+const nameInput = document.querySelector('.name-input');
+nameInput?.addEventListener('input', onNameInputChange);
+
+const deleteButton = document.querySelector('.delete-button');
 
 function onRedirectToAdd() {
   window.location = '/add';
@@ -31,4 +33,8 @@ async function onUpdateSubmit(event) {
   
   updateForm.action = '/delete';
   updateForm.submit();
+}
+
+function onNameInputChange() {
+  deleteButton?.remove();
 }
