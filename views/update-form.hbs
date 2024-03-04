@@ -6,7 +6,8 @@
 
   <div class="w-100 d-flex gap-2">
     {{> input name="name" className="form-control w-50 name-input" content=name}}
-    {{> input name="phone" className="form-control w-50 phone-input" content=phone}}
+    {{> input name="phone" className="form-control w-50 phone-input" content=phone disabled="disabled"}}
+    {{> input name="phone" className="form-control w-50 phone-input d-none" content=phone}}
   </div>
 
   <div class="w-100 d-flex gap-2">
