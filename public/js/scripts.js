@@ -28,7 +28,12 @@ async function onCancel() {
 }
 
 async function onContact(name, phone) {
+  if(getUriPath() === '/add' || getUriPath() === '/update') return;
   window.location.href = `/update?name=${name}&phone=${phone}`;
+}
+
+function getUriPath() {
+  return window.location.pathname;
 }
 
 function onAddSubmit(event) {
